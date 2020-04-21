@@ -8,7 +8,7 @@ from os.path import isfile, join
 folder_path = '/Users/jameskuo/Desktop/PCO2/working_folder'
 
 os.chdir(folder_path)
-#Finds for files ending with .log and sorts the file names in ascending order
+#Looks for files ending with .log and sorts the file names in ascending order
 file_list = [f for f in listdir(folder_path) if isfile(join(folder_path, f)) and f.endswith('.log')]
 file_list = sorted(file_list)
 
