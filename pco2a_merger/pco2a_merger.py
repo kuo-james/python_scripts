@@ -14,7 +14,7 @@ folder_path = tkFileDialog.askdirectory(parent=root, initialdir=currdir, title='
 #folder_path = '/Users/jameskuo/Documents/Code/python_scripts/pco2a_merger/pco2a_d00011'
 
 os.chdir(folder_path)
-#Finds for files ending with .log and sorts the file names in ascending order
+#Looks for files ending with .log and sorts the file names in ascending order
 file_list = [f for f in listdir(folder_path) if isfile(join(folder_path, f)) and f.endswith('.log')]
 file_list = sorted(file_list)
 
