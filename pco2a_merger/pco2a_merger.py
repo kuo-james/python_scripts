@@ -1,11 +1,17 @@
 import re
-import os
+import Tkinter
+import tkFileDialog
 import shutil
+import os
 from os import listdir
 from os.path import isfile, join
 
+root = Tkinter.Tk()
+root.withdraw()
+currdir = os.getcwd()
+folder_path = tkFileDialog.askdirectory(parent=root, initialdir=currdir, title='Please select a directory')
 #Folder where pco2a.log files are in
-folder_path = '/Users/jameskuo/Desktop/PCO2/working_folder'
+#folder_path = '/Users/jameskuo/Documents/Code/python_scripts/pco2a_merger/pco2a_d00011'
 
 os.chdir(folder_path)
 #Finds for files ending with .log and sorts the file names in ascending order
